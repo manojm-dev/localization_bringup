@@ -12,21 +12,25 @@ This launch file can:
 - Optionally start RViz with a preconfigured `.rviz` file
 - Support simulated or real-time clock via `use_sim_time`
 
-## 🛠️ Build Instructions
+## 🧑‍💻 Setup
 
-```bash
-cd ~/ros2_ws/src
-git clone https://github.com/manojm-dev/localization_bringup.git
-cd ..
-colcon build --packages-select localization_bringup
-source install/setup.bash
+1. 📂 Clone the repository
+```
+mkdir -p ~/ros_ws/src
+cd ~/ros_ws/src
+git clone  https://github.com/manojm-dev/localization_bringup.git
 ```
 
-## 📦 Installing Dependencies
-
+2) 📦 Install dependencies
 ```
-cd ~/ros2_ws
+cd ~/ros_ws
 sudo apt-get update -y && rosdep update && rosdep install --from-paths src --ignore-src -y
+```
+
+3) 🛠️ Building the packages
+```
+cd ~/ros_ws
+colcon build
 ```
 
 ## 🚀 How to Launch
